@@ -1,0 +1,39 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+
+on: [push, workflow_dispatch]
+
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    #if: ${{ github.event.pull_request.merged }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: install python3
+        run: sudo apt install -y python3 python3-pip
+      - name: install needed packages
+        run: python3 -m pip install jinja2 datetime 
+      - name: build html
+        run: |
+          mkdir docs/
+          python3 pages.py
+          mv index.html docs/
+          mv favicon.png docs/
+          
+      - name: Deploy to GitHub Pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs
