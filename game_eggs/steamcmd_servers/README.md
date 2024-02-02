@@ -157,6 +157,10 @@ This is a collection of servers that use SteamCMD to install.
 
 [Mount & Blade II: Bannerlord](mount_blade_II_bannerlord)
 
+## Necesse
+
+[Necesse](necesse)
+
 ## Neos VR
 [Neos VR](neosvr)
 
@@ -236,6 +240,10 @@ This is a collection of servers that use SteamCMD to install.
 * [SCP: Secret Laboratory](scpsl)
   * [dedicated](scpsl/dedicated)
   * [exiled](scpsl/exiled)
+
+## Smalland: Survive the Wilds
+
+[Smalland: Survive the Wilds](smalland_survive_the_wilds)
 
 ## Solace Crafting
 
