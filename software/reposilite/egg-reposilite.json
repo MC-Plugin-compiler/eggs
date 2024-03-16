@@ -4,7 +4,7 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2024-02-13T17:26:13+0000",
+    "exported_at": "2024-03-16T10:55:36+01:00",
     "name": "Reposilite",
     "author": "mk@kcra.me",
     "description": "Lightweight and easy-to-use repository management software dedicated for Maven based artifacts in the JVM ecosystem.",
